@@ -665,21 +665,21 @@
                             <label>iOS Product ID <span class="required">*</span></label>
                             <input type="text" value="${plan.iosProductID}" 
                                    oninput="updatePlan(${plan.id}, 'iosProductID', this.value)"
-                                   placeholder="JingLiang.usProductionLine.page.yr_org_299.IOS">
+                                   placeholder="">
                         </div>
                         
                         <div class="form-group">
                             <label>Android Product ID <span class="required">*</span></label>
                             <input type="text" value="${plan.androidProductID}" 
                                    oninput="updatePlan(${plan.id}, 'androidProductID', this.value)"
-                                   placeholder="cm.page.yr_org_andr">
+                                   placeholder="">
                         </div>
                         
                         <div class="form-group">
                             <label>Android Base Plan ID <span class="required">*</span></label>
                             <input type="text" value="${plan.androidBasePlanID}" 
                                    oninput="updatePlan(${plan.id}, 'androidBasePlanID', this.value)"
-                                   placeholder="yr-org-1000">
+                                   placeholder="">
                         </div>
                     </div>
 
@@ -841,7 +841,7 @@
                         <input type="text" value="${promo.code}" 
                                oninput="updatePromoCode(${promo.id}, this.value.toUpperCase())"
                                placeholder="TEST1" style="text-transform: uppercase;">
-                        <span class="hint">優惠碼必須全大寫,例如: IMFAN, IMNEW</span>
+                        <span class="hint">優惠碼必須全大寫</span>
                     </div>
 
                     ${promo.planInfoList.map((plan, index) => `
@@ -887,8 +887,7 @@
                                     <label>Android Offer ID</label>
                                     <input type="text" value="${plan.androidOfferID}" 
                                            oninput="updatePromoPlan(${promo.id}, ${index}, 'androidOfferID', this.value)"
-                                           placeholder="yr-of-999 (永久優惠可留空)">
-                                    <span class="hint">首期優惠/免費試用需填,永久優惠可留空</span>
+                                           placeholder="">
                                 </div>
                                 
                                 <div class="form-group">
@@ -1016,8 +1015,7 @@
             if (firstPromo && firstPromo.code) {
                 codeDisplay.innerHTML = `
                     <div class="promo-badge-display">${firstPromo.code}</div>
-                    <div class="promo-check-display">
-                        ✓ 已套用永久優惠
+                    
                     </div>
                 `;
             } else {
